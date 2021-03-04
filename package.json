@@ -1,4 +1,5 @@
 {
+  "homepage": "https://monikapikuzinska.github.io/users_list/",
   "name": "users_list",
   "version": "0.1.0",
   "private": true,
@@ -6,15 +7,23 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.1",
+    "autoprefixer": "^10.2.4",
+    "axios": "^0.21.1",
+    "gh-pages": "^3.1.0",
+    "postcss": "^8.2.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.3",
+    "tailwindcss": "^2.0.3",
     "web-vitals": "^1.1.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "build-css": "tailwindcss build src/css/style.css -o src/style.css",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
